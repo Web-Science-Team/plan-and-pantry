@@ -1,0 +1,27 @@
+#############################################
+	Database Structure Planning
+#############################################
+
+
+
+root
+
+###	public recipes (open to all users)
+		each recipe will have a unique public id - created when the recipe is shared publicly
+		also store the date added
+		store the name/username of the creator
+		store ingredient amounts needed
+		store steps
+
+
+
+###	private recipes (based on user)
+		each recipe will have a unique local id for the user
+		store the date added
+		store ingredient amounts needed
+		store steps 
+
+
+###	ingredients
+		each ingredient will have a site wide id
+		Users will be able to pick from these ingredients or add new ones
