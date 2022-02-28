@@ -10,16 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import {MatToolbarModule } from '@angular/material/toolbar'
 
 import { MatIconModule } from '@angular/material/icon';
 
 import { ReactiveFormsModule} from '@angular/forms';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { ReactiveFormsModule} from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
 
   ],
   providers: [],
