@@ -1,0 +1,6 @@
+.content{
+    min-height: 100%;
+    padding: 60px 1rem;
+    background-color: lightblue;
+    display: block;
+}
