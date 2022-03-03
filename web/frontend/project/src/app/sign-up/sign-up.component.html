@@ -34,7 +34,7 @@
                     </mat-error>
                 </mat-form-field>
             </div>
-            <button mat-flat-button color="primary">Create your account</button>
+            <button mat-flat-button color="primary" routerLink="../signin-component" [disabled]="!loginForm.valid">Create your account</button>
         </form>
     </mat-card-content>
 </mat-card>
