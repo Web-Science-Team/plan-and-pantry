@@ -1,6 +1,6 @@
-<h1 style="text-align:center; font-size: 50px; padding:10px; color:dodgerblue">Plan & Pantry Logo</h1>
-<a href="../sign-in/sign-in.component.html" mat-button style="float: right;"> Login </a>
-<a href="../sign-up/sign-up.component.html" mat-button style="float: right;"> SignUp </a>
+<h1 style="text-align:center; font-size: 50px; padding:10px; color:dodgerblue; font-family: 'Satisfy', cursive;">Plan & Pantry</h1>
+<a routerLink='../login-component' mat-button style="float: right;">Login</a>
+<a routerLink="../signup-component" mat-button style="float: right;">Sign Up</a>
  
 <mat-toolbar color="primary">
 <span>Explore Recipes</span>
@@ -12,22 +12,244 @@
 <a mat-button> Desserts </a>
 </mat-toolbar>
 
-<mat-card class="example-card">
+<div id="bodyblock">
+  <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Sheet Pan Lemon Chicken with Potatoes, Tomatoes, and Capers</mat-card-title>
+        <mat-card-subtitle>This sheet pan dinner is a combination of juicy chicken thighs, capers, lemon, cherry tomatoes, and a generous shower of fresh basil. Everything is done at once and can be served straight from the sheet pan.</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          <li>1 1/2 pounds small, waxy potatoes, such as red, fingerlings, or yellow finn</li>
+          <li>1 pint (2 cups) cherry tomatoes</li>
+          <li>3 tablespoons capers</li>
+          <li>1 large lemon</li>
+          <li>3 tablespoons extra-virgin olive oil</li>
+          <li>1 teaspoon ground cumin</li>
+          <li>2 large cloves garlic, grated on a microplane or finely chopped</li>
+          <li>2 1/2 teaspoons kosher salt, divided
+          <li>2 1/2 pounds bone-in, skin-on chicken thighs</li>
+          <li>Freshly ground black pepper, to taste</li>
+          <li>1/3 cup fresh basil, roughly chopped, for garnish</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-title>Pasta with Ricotta and Pan-Fried Tomato Sauce</mat-card-title>
+      <mat-card-subtitle>This quick weeknight dish uses a searingly hot pan and fluffy fresh ricotta to recreate the flavors of classic stuffed shell recipe.</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+      <ul>
+        <li>1/4 cup olive oil</li>
+        <li>1/2 red onion, thinly sliced</li>
+        <li>1/2 teaspoon kosher salt, divided</li>
+        <li>8 pitted green olives, halved</li>
+        <li>1 (28-ounce) can of whole, peeled tomatoes, drained (preferably San Marzanos)</li>
+        <li>1/4 teaspoon granulated sugar</li>
+        <li>1/8 teaspoon freshly ground black pepper</li>
+        <li>1 pound small or medium-sized shell pasta, such as “No.50” size</li>
+        <li>1 tablespoon unsalted butter</li>
+        <li>12 ounces good-quality ricotta</li>
+        <li>Chiffonade basil, for garnish</li>
+      </ul>
     </mat-card-content>
     <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-  
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Kalbi Jjim (Korean Braised Short Ribs)</mat-card-title>
+      <mat-card-subtitle>These tender, savory and sweet beef short ribs are a popular dish served for Seollal (Korean Lunar New Year), birthdays, and special celebrations.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>8 (about 1 ounce) dried shiitake mushrooms</li>
+        <li>1 cup hot water</li>
+        <li>5 to 5 1/2 pounds meaty bone-in beef short ribs, cut into 1 1/2x2 1/2-inch pieces</li>
+        <li>1 tablespoon kosher salt</li>
+        <li>1 teaspoon black pepper</li>
+        <li>2 teaspoons canola oil</li>
+        <li>1 Asian pear, peeled, cored, and chopped</li>
+        <li>10 cloves garlic</li>
+        <li>1 medium yellow onion, chopped</li>
+        <li>1-inch piece ginger, peeled and chopped</li>
+        <li>2 scallions, ends trimmed and halved crosswise</li>
+        <li>3/4 cup soy sauce</li>
+        <li>1/4 cup mirin</li>
+        <li>3 tablespoons dark brown sugar</li>
+        <li>2 tablespoons honey</li>
+        <li>3 large carrots, peeled and cut 3/4-inch-thick on a bias</li>
+        <li>1 small (1-pound) daikon radish, peeled and cut crosswise into 3/4-inch slices, then quartered into wedges</li>
+        <li>1 scallion, thinly sliced</li>
+        <li>1 tablespoon toasted sesame oil</li>
+        <li>Steamed rice</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Matar Paneer</mat-card-title>
+      <mat-card-subtitle>Matar paneer is a traditional North Indian dish of creamy paneer and peas swimming in a mildly spiced tomato sauce. My take on the classic dish can be prepared in just around 30 minutes.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>1 cup (8 ounces) canned whole peeled tomatoes</li>
+        <li>3 tablespoons canola oil, divided</li>
+       <li> 1 tablespoon ginger, peeled and minced (from about a 1-inch piece)</li>
+        <li>2 garlic cloves, minced</li>
+        <li>1 small red onion, diced</li>
+        <li>2 whole cardamom pods</li>
+        <li>2 whole cloves</li>
+        <li>1 teaspoon garam masala</li>
+        <li>1/4 teaspoon mild chili powder, such as Kashmiri chili powder</li>
+        <li>1/2 teaspoon ground coriander</li>
+        <li>1/2 teaspoon ground cumin</li>
+        <li>1/2 teaspoon kosher salt, plus more to taste</li>
+        <li>cup water, plus more if needed</li>
+        <li>2 teaspoons maple syrup</li>
+        <li>2 tablespoons heavy cream</li>
+        <li>3/4 cup (4 ounces) frozen peas</li>
+        <li>8 ounces paneer, cut into 3/4-inch cubes</li>
+        <li>1/2 teaspoon dried fenugreek</li>
+        <li>1/4 cup loosely packed fresh cilantro, chopped</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Chicken Stuffing Casserole</mat-card-title>
+      <mat-card-subtitle>Thanksgiving flavors any time of the year? Yes, please! Impress your family with this creamy, crunchy, and delicious chicken stuffing casserole!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+       <li>5 tablespoons unsalted butter, divided</li>
+        <li>7 ounces day-old sourdough loaf, cut in 3/4- to 1-inch cubes (about 4 cups)</li>
+        <li>1/2 teaspoon kosher salt, divided</li>
+        <li>1/2 teaspoon freshly ground black pepper, divided</li>
+        <li>3 stalks celery, halved lengthwise and cut into 1/2-inch pieces (about 1 1/2 cups)</li>
+        <li>1 medium yellow onion, chopped (about 1 1/4 cups)</li>
+        <li>1 tablespoon minced fresh rosemary</li>
+        <li>2 teaspoons minced fresh sage leaves</li>
+        <li>1 1/4 teaspoons minced fresh thyme</li>
+        <li>1/2 cup low-sodium chicken broth</li>
+        <li>5 tablespoons unsalted butter, divided</li>
+        <li>1 medium yellow onion, chopped (about 1 1/4 cups)</li>
+        <li>1 large carrot, trimmed and chopped (about 1 cup)</li>
+        <li>1 teaspoon kosher salt, divided</li>
+        <li>1/2 teaspoon freshly ground black pepper, divided</li>
+        <li>1 cup frozen peas, thawed</li>
+        <li>1/3 cup chopped fresh flat-leaf parsley</li>
+        <li>2 pounds (about 4 cups) shredded cooked chicken</li>
+        <li>2 cups whole milk</li>
+        <li>1/4 cup all-purpose flour</li>
+    </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Cast Iron Skillet Pizza</mat-card-title>
+      <mat-card-subtitle>Cooking pizza in a hot cast iron skillet gets the edges deeply golden brown and crackling. We endorse store-bought pizza dough and jarred red sauce for a quick and easy weeknight dinner!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>1 tablespoon olive oil</li>
+        <li>1 pound (454g) pizza dough, store-bought or homemade</li>
+        <li>All-purpose flour, for dusting</li>
+        <li>1 1/2 cups (170g) shredded low-moisture mozzarella cheese</li>
+        <li>1/3 cup pizza sauce, store-bought or homemade</li>
+        <li>2 tablespoons finely grated Parmesan cheese</li>
+        <li>3 to 4 fresh basil leaves</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Veggie Pizza</mat-card-title>
+      <mat-card-subtitle>This is our ultimate oven-baked veggie lover’s pizza. Red sauce, mozzarella, red onions, olives, bell peppers, artichokes, and a golden crust. It’s all here!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>2 (1-pound) store-bought or homemade pizza dough</li>
+        <li>All-purpose flour, for dusting the the countertop</li>
+        <li>Cornmeal, to dust the peel or baking sheet</li>
+        <li>3/4 cup store-bought or homemade pizza sauce</li>
+        <li>1 cup (4 ounces) grated mozzarella cheese</li>
+        <li>1/2 yellow bell pepper, seeded and sliced</li>
+        <li>1/2 small red onion, sliced</li>
+        <li>1/2 cup pitted Kalamata olives, halved if large</li>
+        <li>1 (14-ounce) can artichoke hearts packed in water, drained and quartered</li>
+        <li>1/4 cup grated Parmesan cheese</li>
+        <li>Olive oil, for garnish</li>
+        <li>Basil leaves, for garnish</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Sheet Pan Mini Meatloaves with Crispy Broccoli and Mustard Glazed Potatoes</mat-card-title>
+      <mat-card-subtitle>An easy barbecue meatloaf dinner with potatoes and broccoli is cooked on a single sheet pan to save on time and reduce dishes.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>1/4 cup plain breadcrumbs</li>
+        <li>2 tablespoons dried onion flakes</li>
+        <li>1 teaspoon paprika</li>
+        <li>1/2 teaspoon chili powder</li>
+        <li>1 teaspoon garlic powder</li>
+        <li>1 teaspoon salt</li>
+        <li>1/2 teaspoon ground black pepper</li>
+        <li>1 pound 85% ground beef</li>
+        <li>1 large egg</li>
+        <li>1 tablespoon tomato paste</li>
+        <li>1 tablespoon Worcestershire sauce</li>
+        <li>1/4 cup barbeque sauce, store bought or homemade</li>
+        <li>1 tablespoon fresh parsley, finely chopped, for garnish (optional)</li>
+        <li>1 tablespoon whole grain mustard</li>
+        <li>1 tablespoon extra-virgin olive oil</li>
+        <li>1 pound baby yellow potatoes, quartered</li>
+        <li>1/4 teaspoon salt</li>
+        <li>3 cups broccoli florets</li>
+        <li>1 tablespoon extra-virgin olive oil</li>
+        <li>1/4 teaspoon salt</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
