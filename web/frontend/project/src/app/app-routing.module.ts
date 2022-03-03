@@ -4,8 +4,6 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {path: 'signin-component', component: SignInComponent},
