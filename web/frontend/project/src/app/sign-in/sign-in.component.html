@@ -6,15 +6,15 @@
         <form (ngSubmit)="onLogin()" name = "loginForm" [formGroup]="loginForm">
             <div class="email-input">
                 <mat-form-field class="full-width" appearance ="outline">
-                    <mat-label>Email</mat-label>
+                    <mat-label>User Name</mat-label>
                     <input formControlName="email" matInput required />
                     <mat-error *ngIf="loginForm.get('email').errors?.required">
-                        Required email address
+                        Required User Name
                     </mat-error>
                 </mat-form-field>
             </div>
             <div>
-                <span class="aLink">Forgot Password?</span>
+                <a class="aLink" style="color: black;" routerLink="../forgetPassword-component">Forgot Password?</a>
                 <mat-form-field class="full-wdith" appearance="outline">
                     <mat-label>password</mat-label>
                     <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
@@ -23,11 +23,12 @@
                         <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
                     </button>
                     <mat-error *ngIf="loginForm.get('password').errors?.required">
-                        Required PW
+                        Required Password
                     </mat-error>
                 </mat-form-field>
             </div>
-            <button mat-flat-button color="primary">Login</button>
+            <button style="margin: 20px;" mat-flat-button color="primary" routerLink="../recipes-component" [disabled]="!loginForm.valid">Login</button>
+            <button mat-flat-button color="primary" routerLink="../signup-component">New to the app? Create an account</button>
         </form>
 
     </mat-card-content>
