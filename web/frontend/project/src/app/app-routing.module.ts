@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: 'signin-component', component: SignInComponent},
-  {path: 'signup-component', component: SignUpComponent},
-  {path: 'recipes-component', component: RecipesComponent},
-  {path: '', redirectTo: '/signin-component', pathMatch: 'full'}
+  {path: 'sign-in', component: SignInComponent},
+  {path: 'sign-up', component: SignUpComponent},
+  {path: 'recipe-search', component: RecipesComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent}
 ]
 
 @NgModule({

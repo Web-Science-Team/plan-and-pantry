@@ -14,8 +14,7 @@
                 </mat-form-field>
             </div>
             <div>
-                <a class="aLink" style="color: black;" routerLink="../forgetPassword-component">Forgot Password?</a>
-                <mat-form-field class="full-wdith" appearance="outline">
+                <mat-form-field class="full-width" appearance="outline">
                     <mat-label>password</mat-label>
                     <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
                     <button mat-icon-button matSuffix (click)="hide = !hide"
@@ -26,9 +25,16 @@
                         Required Password
                     </mat-error>
                 </mat-form-field>
+            
             </div>
-            <button style="margin: 20px;" mat-flat-button color="primary" routerLink="../recipes-component" [disabled]="!loginForm.valid">Login</button>
-            <button mat-flat-button color="primary" routerLink="../signup-component">New to the app? Create an account</button>
+            <div>
+                <a class="aLink" style="color: black;" routerLink="../forgetPassword-component">Forgot Password?</a>
+            </div>
+
+            <div>
+                <button style="margin: 20px;" mat-flat-button color="primary" routerLink="../recipes-component" [disabled]="!loginForm.valid">Login</button>
+                <button mat-flat-button color="primary" routerLink="../signup-component">New to the app? Create an account</button>
+            </div>
         </form>
 
     </mat-card-content>

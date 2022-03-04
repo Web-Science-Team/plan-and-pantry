@@ -16,13 +16,17 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { ReactiveFormsModule} from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
+import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    RecipesComponent
+    RecipesComponent,
+    HomeComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
