@@ -118,6 +118,29 @@
                 <form action="#" class="instructions"></form>
                 <h2>Instructions</h2>
                 <textarea name="recipe_instruction" id="recipe_instruction" cols="80" rows="10"></textarea>
+                <hr>
+                <h2>Upload an image of the food for the recipe</h2>
+                <div class="text-center">
+                    <input class="form-control" type="file" 
+                            (change)="onChange($event)">
+                  
+                    <button (click)="onUpload()" 
+                        class="btn btn-success">
+                        Upload
+                    </button>
+                </div>
+                  
+                <!-- Shareable short link of  uoloaded file -->
+                <div class="container text-center jumbotron"
+                    *ngIf="shortLink">
+                    <h2> Visit Here</h2>
+                    <a href="{{shortLink}}">{{shortLink}}</a>
+                </div>
+                  
+                <!--Flag variable is used here-->
+                <div class="container" *ngIf="loading">
+                    <h3>Loading ...</h3>
+                </div>
             </div>
 
             <!-- The button below will be used to submit the recipe to the db. -->
