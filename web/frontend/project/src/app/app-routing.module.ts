@@ -5,6 +5,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { HomeinComponent } from './homein/homein.component';
 import { PantryComponent } from './pantry/pantry.component';
 
 const routes: Routes = [
@@ -13,8 +14,9 @@ const routes: Routes = [
   {path: 'recipe-search', component: RecipesComponent},
   {path: 'home', component: HomeComponent},
   {path: 'pantry', component: PantryComponent},
+  {path: 'home2', component: HomeinComponent},
 
-  {path: '', redirectTo: 'pantry', pathMatch: 'full'}
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
 ]
 
 @NgModule({

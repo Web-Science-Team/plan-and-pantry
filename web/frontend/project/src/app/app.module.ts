@@ -17,6 +17,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PantryComponent } from './pantry/pantry.component';
+import { HomeinComponent } from './homein/homein.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PantryComponent } from './pantry/pantry.component';
     RecipesComponent,
     HomeComponent,
     SidebarComponent,
-    PantryComponent
+    PantryComponent,
+    HomeinComponent
   ],
   imports: [
     BrowserModule,
