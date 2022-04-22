@@ -10,8 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatToolbarModule } from '@angular/material/toolbar'
-
+import {MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 
 import { ReactiveFormsModule} from '@angular/forms';
@@ -37,7 +37,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule
 
   ],
   providers: [],
