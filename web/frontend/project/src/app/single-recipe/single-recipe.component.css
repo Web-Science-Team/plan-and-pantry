@@ -3,17 +3,14 @@ h1 {
     font-size: 40px;
 }
 
-.name {
+.navbar {
     background-color: rgba(255,184,0,255);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.ttle {
-    display: table;    
-    margin: 0 auto;
 }
 
-.steps {
-    margin:  auto;
+.carousel {
+    /* height: 781px; */
     background-color : rgba(10,92,115,255);
-}
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
