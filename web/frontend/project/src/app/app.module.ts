@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatToolbarModule } from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 import { MatIconModule } from '@angular/material/icon';
 
@@ -18,6 +18,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SignUpComponent,
     RecipesComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    SingleRecipeComponent
   ],
   imports: [
     BrowserModule,
