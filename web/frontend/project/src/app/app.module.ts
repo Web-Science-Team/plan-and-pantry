@@ -18,6 +18,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SignUpComponent,
     RecipesComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    RecipeListComponent
   ],
   imports: [
     BrowserModule,
