@@ -7,6 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 
 const routes: Routes = [
   {path: 'login', component: SignInComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'single-view', component: SingleRecipeComponent},
   
-  {path: 'sidebar', component: SidebarComponent}
+  {path: 'sidebar', component: SidebarComponent},
+  {path: 'logged-in-home', component: LoggedInHomeComponent}
 ]
 
 @NgModule({

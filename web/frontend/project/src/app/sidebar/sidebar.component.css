@@ -3,6 +3,7 @@ mat-toolbar{
     justify-content: center;
     font-size: 40px;
     color: white;
+    /* margin-bottom: 10%; */
 }
 
 mat-sidenav{
