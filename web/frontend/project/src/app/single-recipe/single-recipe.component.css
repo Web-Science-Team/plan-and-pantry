@@ -1,19 +1,32 @@
 h1 {
-    color: white;
-    font-size: 40px;
+  color: white;
+  font-size: 40px;
 }
 
 .name {
-    background-color: rgba(255,184,0,255);
-    padding-top: 10px;
-    padding-bottom: 10px;
+  background-color: rgba(255, 184, 0, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 .ttle {
-    display: table;    
-    margin: 0 auto;
+  display: table;
+  margin: 0 auto;
 }
 
 .steps {
-    margin:  auto;
-    background-color : rgba(10,92,115,255);
+  margin: auto;
+  background-color: rgba(10, 92, 115, 255);
+}
+
+.navbar {
+  background-color: rgba(255, 184, 0, 255);
+}
+
+.carousel {
+  /* height: 781px; */
+  background-color: rgba(10, 92, 115, 255);
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
 }
