@@ -1,0 +1,16 @@
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.navbar {
+    background-color: rgba(255,184,0,255);
+}
+
+.carousel {
+    /* height: 781px; */
+    background-color : rgba(10,92,115,255);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
