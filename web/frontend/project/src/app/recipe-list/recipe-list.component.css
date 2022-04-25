@@ -17,3 +17,7 @@ h1 {
     margin:  auto;
     background-color : rgba(10,92,115,255);
 }
+
+.container {
+    max-width:  100%;
+}

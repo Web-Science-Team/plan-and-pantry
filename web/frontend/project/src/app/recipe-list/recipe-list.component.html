@@ -1,26 +1,35 @@
+
+
 <nav class="name">
-    <h1 class="ttle">Plan & Pantry</h1>
+		<h1 class="ttle">Plan & Pantry</h1>
 </nav>
-<div class="lists">
-    <div style="width: 80%;">
-        <h1 style="text-align: center; font-size: 30px;">Favorite Recipes</h1>
-        <mat-card>
-            <mat-card-content style="padding: 20px;">
-                <h3>Favorite Lists</h3>
-                <mat-form-field class="example-full-width">
-                    <span matPrefix> </span>
-                    <input type="tel" matInput placeholder="Search" name= "search">
-                    <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-                </mat-form-field>
-                <ul style="text-decoration: none;">
-                    <li><a href="#">Recipe Title</a></li>
-                    <li><a href="#">Recipe Title</a></li>
-                    <li><a href="#">Recipe Title</a></li>
-                    <li><a href="#">Recipe Title</a></li>
-                    <li><a href="#">Recipe Title</a></li>
-                    <li><a href="#">Recipe Title</a></li>
-                </ul>
-            </mat-card-content>
-        </mat-card>
-    </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col" style="max-width: 240px;">
+			<app-sidebar></app-sidebar>
+		</div>
+
+		<div class="col col-md">
+			<mat-card style="margin-top:20px">
+					<mat-card-content style="padding: 20px;">
+							<h3>Favorite Lists</h3>
+							<mat-form-field class="example-full-width">
+									<span matPrefix> </span>
+									<input type="tel" matInput placeholder="Search" name= "search">
+									<button matSuffix mat-button><mat-icon >search</mat-icon></button>
+							</mat-form-field>
+							<ul style="text-decoration: none;">
+									<li><a href="#">Recipe Title</a></li>
+									<li><a href="#">Recipe Title</a></li>
+									<li><a href="#">Recipe Title</a></li>
+									<li><a href="#">Recipe Title</a></li>
+									<li><a href="#">Recipe Title</a></li>
+									<li><a href="#">Recipe Title</a></li>
+							</ul>
+					</mat-card-content>
+			</mat-card>
+
+		</div>
+	</div>
 </div>
