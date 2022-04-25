@@ -14,9 +14,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule }from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -32,7 +32,7 @@ import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component
     RecipesComponent,
     HomeComponent,
     SidebarComponent,
-    RecipeListComponent
+    RecipeListComponent,
     SingleRecipeComponent,
     LoggedInHomeComponent
   ],
