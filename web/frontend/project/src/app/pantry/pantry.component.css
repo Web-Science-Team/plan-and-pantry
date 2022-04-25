@@ -4,16 +4,27 @@
 }
 
 .col {
-	margin-bottom: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  }
+
+.section_name {
+  text-align: center;
 }
 
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px s
- }
+h2 {
+  margin-bottom: -5px;
+}
 
- .addBar {
-  
- }
+.addBar {
+  display: inline-block;
+  width: 90%;
+}
+
+input {
+  width: 50%;
+}
+
+button {
+  margin-left: -20%;
+}

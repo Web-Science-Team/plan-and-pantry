@@ -1,55 +1,48 @@
-import { Component, OnInit } from '@angular/core';
-import $ from 'jquery'
-
-//$.ajax().then().catch().finnally()
-
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-pantry',
   templateUrl: './pantry.component.html',
   styleUrls: ['./pantry.component.css']
 })
-export class PantryComponent implements OnInit {
+export class PantryComponent implements AfterViewInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-  /*
-    var fruits = ["Apples","Bananas","Oranges","Grapes"]
-    var vegerables = ["Carrots","Asparagus","Beets","Broccoli"]
-    var fridge = ["Greek Yogurt","Milk","Half & Half","Eggs"]
-    var freezer = ["Frozen Pizza","Tatter Tots","Chicken Strips","Totino's Pizza Rolls"]
-
-    this.makeItems(fruits, "#fruitPlace", "fruit");
-  */
+  constructor() {
   }
 
-/*
-  public makeItems(flist:string[], location:string, type:string) {
+  ngAfterViewInit(): void {
+    var pantry_list = ["Apples","Bananas","Oranges","Beets", "Watermelon", "Mango"];
+    var fridge_list = ["Carrots","Asparagus","Broccoli", "Grapes", "Greek Yogurt","Milk","Half & Half","Eggs"];
+    var freezer_list =["Frozen Pizza","Tatter Tots","Chicken Strips","Totino's Pizza Rolls"];
+    var spices_list = ["Garlic Powder", "Ground Cinnamon", "Nutmeg", "Cumin", "Basil", "Onion Powder", "Oregano", "Paprika", "Chili Powder"];
 
-    var outsideDiv = $(location)
-    var fn = 0;
-    for (var f of flist){
-      var template = '<div class="col">' +
-        '<div class="card ingredient">' +
-          '<label for="%itemNum%">' +
-            '<div class="card-body">' +
-              '<input id="%itemNum%" type="checkbox" name="%itemName%" value="checked" />%itemName%' +
-            '</div>' +
-          '</label>' +
-        '</div>' +
-      '</div>'
+    //console.log("dkjndkajsndsj");
+    this.makeItems(pantry_list, "pantryList", "pantry");
+    this.makeItems(fridge_list, "fridgeList", "fridge");
+    this.makeItems(freezer_list, "freezerList", "freezer");
+    this.makeItems(spices_list, "spiceList", "spice");
+  }
 
-      var fnam = f;
-      var fnum = type + fn.toString;
-      console.log(fn)
+  public makeItems(flist:string[], location:string, abreviation:string) {
 
-      var divContent = template.replace("%itemNum%", fnum).replace("%itemNum%", fnum).replace("%itemName%", fnam).replace("%itemName%", fnam);
-      outsideDiv.append(divContent);
-      fn ++;
+      document.getElementById(location).innerHTML = "";
+      //console.log(location)
+      //console.log("VV DIV TO HIT VV")
+      //console.log(outsideDiv);
+      var fn = 0;
+      for (var f of flist){
+
+        var iname = f;
+        var inum = abreviation + fn;
+        var template =  '<label class="itm" style="display:block" for='+inum+'><div class="card-body">'+
+                          '<input id='+inum+' style="margin-right:5px" type="checkbox" name='+abreviation+' />'+
+                            iname+'</div></label>'
+        
+        //console.log(template);
+        document.getElementById(location).innerHTML += template;
+        fn ++;
+      }
     }
 
-  }
-  */
+  
 }
