@@ -10,14 +10,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatToolbarModule } from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { MatIconModule } from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule}from '@angular/material/divider';
+
+
 
 import { ReactiveFormsModule} from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
+import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SignUpComponent,
     RecipesComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    SingleRecipeComponent,
+    LoggedInHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDividerModule,
+    MatSidenavModule
 
   ],
   providers: [],
