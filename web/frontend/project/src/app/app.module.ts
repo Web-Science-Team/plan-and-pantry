@@ -10,19 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule}from '@angular/material/divider';
-
-
-
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
+import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,9 @@ import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
     RecipesComponent,
     HomeComponent,
     SidebarComponent,
-    SingleRecipeComponent
+    RecipeListComponent,
+    SingleRecipeComponent,
+    LoggedInHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
     ReactiveFormsModule,
     MatIconModule,
     MatToolbarModule,
+    MatFormFieldModule,
     MatDividerModule,
     MatSidenavModule
 
