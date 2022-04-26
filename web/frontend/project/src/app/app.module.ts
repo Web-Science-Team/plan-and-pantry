@@ -23,6 +23,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
+import { PantryComponent } from './pantry/pantry.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component
     SidebarComponent,
     RecipeListComponent,
     SingleRecipeComponent,
-    LoggedInHomeComponent
+    LoggedInHomeComponent,
+    PantryComponent
   ],
   imports: [
     BrowserModule,
