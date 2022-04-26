@@ -105,7 +105,7 @@ module.exports = function (app, client) {
 
 
   // delete all documents from the db
-  app.delete('/recipes', (req, res) => {
+  app.delete('/recipes', async (req, res) => {
     await client.connect();
     collection.deleteMany({}, function (err, result) {
       if (err) {
@@ -121,7 +121,7 @@ module.exports = function (app, client) {
   });
 
   // delete a specific document from the db
-  app.delete('/recipe/:id', (req, res) => {
+  app.delete('/recipe/:id', async (req, res) => {
     await client.connect();
     collection.deleteOne({ 'doc_num': doc_num }, function (err, result) {
       if (err) {
