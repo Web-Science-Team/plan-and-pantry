@@ -10,17 +10,18 @@ import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 import { PantryComponent } from './pantry/pantry.component'
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: SignInComponent },
   { path: 'register', component: SignUpComponent },
-  { path: 'recipe-search', component: RecipesComponent },
-  { path: 'recipe-list', component: RecipeListComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'single-view', component: SingleRecipeComponent },
-  { path: 'sidebar', component: SidebarComponent },
-  { path: 'logged-in-home', component: LoggedInHomeComponent },
+  { path: 'recipe-search', component: RecipesComponent, canActivate: [AuthGuard] },
+  { path: 'recipe-list', component: RecipeListComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'single-view', component: SingleRecipeComponent, canActivate: [AuthGuard] },
+  { path: 'sidebar', component: SidebarComponent, canActivate: [AuthGuard] },
+  { path: 'logged-in-home', component: LoggedInHomeComponent, canActivate: [AuthGuard] },
   { path: 'pantry', component: PantryComponent }
 ]
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../services/auth.service";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class SignUpComponent implements OnInit {
   loginForm: any;
   hide: any;
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup(
@@ -22,11 +23,11 @@ export class SignUpComponent implements OnInit {
 
     this.hide = true;
   }
-  onLogin(){
+  onLogin() {
 
   }
 
   confirmValidation(): boolean {
-      return this.loginForm.password == this.loginForm.confirmPassword;
+    return this.loginForm.password == this.loginForm.confirmPassword;
   }
 }
