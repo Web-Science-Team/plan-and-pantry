@@ -1,109 +1,103 @@
 <nav class="name">
-	<h1 class="ttle">Plan & Pantry</h1>
+  <h1 class="ttle">Plan & Pantry</h1>
 </nav>
 
 <div class="container">
   <div class="row">
-	<div class="col" style="max-width: 240px;">
-	  <app-sidebar class="sticky-top"></app-sidebar>
-	</div>
+    <div class="col" style="max-width: 240px;">
+      <app-sidebar class="sticky-top"></app-sidebar>
+    </div>
 
-	<div class="col col-md">
-		
-		<div class="ing" style="margin-top: 20px; margin-bottom: 20px;">
-			<div style="margin-left: 10px;">
-				<div class="left" style="line-height: 1.8;">
-					<h2>Create New Recipe</h2>
+    <div class="col col-md">
 
-					<div>Total Time(Mins) : <input type="number" id="input_time" name="input_time" min="00:00" required>
-						<p></p>
-						<p style="text-indent: 10px">Prep Time : <input type="number" id="prep_time" name="prep_time"
-								min="00:00" required> </p>
-						<p style="text-indent: 10px">Cook Time : <input type="number" id="cook_time" name="cook_time"
-								min="00:00" required> </p>
-						<p>Servings : <input type="number" id="servings" name="servings" required> people</p>
-					</div>
-					<hr>
-					<div>
-						<h2>Ingredients</h2>
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Amount</th>
-									<th scope="col">Measurement</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Ingredients 1</th>
-									<td><input type="number" id="ingredient01" name="ingredient01" required></td>
-									<td>
-										<mat-form-field appearance="fill">
-											<mat-label>Measurements</mat-label>
-											<mat-select>
-												<mat-option *ngFor="let measurement of measurements"
-													[value]="measurement.value">
-													{{measurement.viewValue}}
-												</mat-option>
-											</mat-select>
-										</mat-form-field>
-									</td>
-									<td>Remove</td>
-								</tr>
+      <div class="ing" style="margin-top: 20px; margin-bottom: 20px;">
+        <div style="margin-left: 10px;">
+          <div class="left" style="line-height: 1.8;">
+            <h2>Create New Recipe</h2>
 
-								<tr>
-									<th scope="row">Ingredients 2</th>
-									<td><input type="number" id="ingredient02" name="ingredient02" required></td>
-									<td>
-										<mat-form-field appearance="fill">
-											<mat-label>Measurements</mat-label>
-											<mat-select>
-												<mat-option *ngFor="let measurement of measurements"
-													[value]="measurement.value">
-													{{measurement.viewValue}}
-												</mat-option>
-											</mat-select>
-										</mat-form-field>
-									</td>
-									<td>Remove</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<hr>
-				</div>
+            <div>Total Time(Mins) : <input type="number" id="input_time" name="input_time" min="00:00" required>
+              <p></p>
+              <p style="text-indent: 10px">Prep Time : <input type="number" id="prep_time" name="prep_time" min="00:00" required> </p>
+              <p style="text-indent: 10px">Cook Time : <input type="number" id="cook_time" name="cook_time" min="00:00" required> </p>
+              <p>Servings : <input type="number" id="servings" name="servings" required> people</p>
+            </div>
+            <hr>
+            <div>
+              <h2>Ingredients</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Measurement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Ingredients 1</th>
+                    <td><input type="number" id="ingredient01" name="ingredient01" required></td>
+                    <td>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Measurements</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let measurement of measurements" [value]="measurement.value">
+                            {{measurement.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </td>
+                    <td>Remove</td>
+                  </tr>
 
-				<form action="#" class="instructions"></form>
-				<h2>Instructions</h2>
-				<textarea name="recipe_instruction" id="recipe_instruction" cols="80" rows="10"></textarea>
-				<hr>
-				<h2>Upload an image of the food for the recipe</h2>
-				<div class="text-center">
-					<input class="form-control" type="file" 
-							(change)="onChange($event)">
-				  
-					<button (click)="onUpload()" class="btn btn-success" type="button">Upload</button>
-				</div>
-				  
-				<!-- Shareable short link of  uoloaded file -->
-				<div class="container text-center jumbotron"
-					*ngIf="shortLink">
-					<h2> Visit Here</h2>
-					<a href="{{shortLink}}">{{shortLink}}</a>
-				</div>
-				  
-				<!--Flag variable is used here-->
-				<div class="container" *ngIf="loading">
-					<h3>Loading ...</h3>
-				</div>
+                  <tr>
+                    <th scope="row">Ingredients 2</th>
+                    <td><input type="number" id="ingredient02" name="ingredient02" required></td>
+                    <td>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Measurements</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let measurement of measurements" [value]="measurement.value">
+                            {{measurement.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </td>
+                    <td>Remove</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr>
+          </div>
 
-			<!-- The button below will be used to submit the recipe to the db. -->
-			<button class="btn btn-outline-info" type="button" routerLink="../add-recipe">Submit</button>
-		</div>
-	</div>
-	</div>
+          <form action="#" class="instructions"></form>
+          <h2>Instructions</h2>
+          <textarea name="recipe_instruction" id="recipe_instruction" cols="80" rows="10"></textarea>
+          <hr>
+          <h2>Upload an image of the food for the recipe</h2>
+          <div class="text-center">
+            <input class="form-control" type="file" (change)="onChange($event)">
+
+            <button (click)="onUpload()" class="btn btn-success" type="button">Upload</button>
+          </div>
+
+          <!-- Shareable short link of  uoloaded file -->
+          <div class="container text-center jumbotron" *ngIf="shortLink">
+            <h2> Visit Here</h2>
+            <a href="{{shortLink}}">{{shortLink}}</a>
+          </div>
+
+          <!--Flag variable is used here-->
+          <div class="container" *ngIf="loading">
+            <h3>Loading ...</h3>
+          </div>
+
+          <!-- The button below will be used to submit the recipe to the db. -->
+          <button class="btn btn-outline-info" type="button" routerLink="../add-recipe">Submit</button>
+        </div>
+      </div>
+    </div>
 
 
-	</div>
   </div>
+</div>
