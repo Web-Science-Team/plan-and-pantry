@@ -27,10 +27,10 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
 import { PantryComponent } from './pantry/pantry.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 
 import { AuthService } from "./services/auth.service";
 
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
@@ -47,8 +47,8 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { HttpClientModule } from
-  '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +66,6 @@ import { HttpClientModule } from
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'plan-and-pantry'),
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
@@ -93,7 +92,8 @@ import { HttpClientModule } from
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'plan-and-pantry'),
 
   ],
   providers: [AuthService],
