@@ -4,10 +4,10 @@
 
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
-
-    <img class="avatar mat-elevation-z8" src="../../assets/default-profile.webp">
-    <h4 class="name">John Doe</h4>
-    <p class="designation">Software Engineer</p>
+    <div *ngIf="authService.userData as user">
+      <img class="avatar mat-elevation-z8" src="../../assets/default-profile.webp">
+      <h4 class="name">{{(user.displayName) ? user.displayName : 'User'}}</h4>
+    </div>
 
     <button mat-button class="menu-button">
       <mat-icon>home</mat-icon>
@@ -39,7 +39,7 @@
       <mat-icon>info</mat-icon>
       <span>About</span>
     </button>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="authService.SignOut()">
       <mat-icon>logout</mat-icon>
       <span>Sign Out</span>
     </button>
