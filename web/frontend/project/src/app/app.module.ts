@@ -26,6 +26,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
+import { PantryComponent } from './pantry/pantry.component';
 
 import { AuthService } from "./services/auth.service";
 
@@ -39,7 +40,8 @@ import { AuthService } from "./services/auth.service";
     SidebarComponent,
     RecipeListComponent,
     SingleRecipeComponent,
-    LoggedInHomeComponent
+    LoggedInHomeComponent,
+    PantryComponent
   ],
   imports: [
     BrowserModule,

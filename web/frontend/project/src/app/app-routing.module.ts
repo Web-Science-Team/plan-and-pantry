@@ -9,6 +9,7 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
+import { PantryComponent } from './pantry/pantry.component'
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'single-view', component: SingleRecipeComponent, canActivate: [AuthGuard] },
     { path: 'sidebar', component: SidebarComponent, canActivate: [AuthGuard] },
-    { path: 'logged-in-home', component: LoggedInHomeComponent, canActivate: [AuthGuard] }
+    { path: 'logged-in-home', component: LoggedInHomeComponent, canActivate: [AuthGuard] },
+    { path: 'pantry', component: PantryComponent }
 ]
 
 @NgModule({
