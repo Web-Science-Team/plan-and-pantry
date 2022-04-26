@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FileUploadService } from '../file-upload.service';
+import { FileUploadService } from '../services/file-upload.service';
 
 
 import { FormBuilder } from '@angular/forms';
@@ -33,7 +33,7 @@ export class AddRecipeComponent implements OnInit {
   }
 
   // On file Select
-  onChange(event:any) {
+  onChange(event: any) {
     this.file = event.target.files[0];
   }
 
@@ -42,17 +42,17 @@ export class AddRecipeComponent implements OnInit {
     this.loading = !this.loading;
     console.log(this.file);
     this.fileUploadService.upload(this.file).subscribe(
-        (event: any) => {
-            if (typeof (event) === 'object') {
+      (event: any) => {
+        if (typeof (event) === 'object') {
 
-                // Short link via api response
-                this.shortLink = event.link;
+          // Short link via api response
+          this.shortLink = event.link;
 
-                this.loading = false; // Flag variable 
-            }
+          this.loading = false; // Flag variable 
         }
+      }
     );
-}
+  }
 }
 
 
