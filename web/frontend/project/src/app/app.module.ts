@@ -17,7 +17,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +26,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
 import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component';
+
+import { AuthService } from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { LoggedInHomeComponent } from './logged-in-home/logged-in-home.component
     MatSidenavModule
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
