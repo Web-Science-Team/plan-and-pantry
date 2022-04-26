@@ -28,3 +28,15 @@ input {
 button {
   margin-left: -20%;
 }
+
+.container {
+  max-width: 95%;
+  width: 95%;
+}
+
+.name {
+  background-color: rgba(255, 184, 0, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
