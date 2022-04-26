@@ -11,8 +11,7 @@
                 <div class="email-input">
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Email</mat-label>
-                        <input autocomplete="false" formControlName="email" placeholder="Ex.xxx@example.com" matInput
-                            required />
+                        <input autocomplete="false" formControlName="email" placeholder="Email Address" #email matInput required />
                         <mat-error *ngIf="loginForm.get('email').errors?.required">
                             Required email address
                         </mat-error>
@@ -24,7 +23,7 @@
                 <div class="email-input">
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input autocomplete="false" formControlName="password" matInput required />
+                        <input autocomplete="false" formControlName="password" #password matInput required />
                         <mat-error *ngIf="loginForm.get('password').errors?.required">
                             Required password
                         </mat-error>
@@ -39,8 +38,13 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
-                <button mat-flat-button color="primary" style="margin: 20px;" routerLink="../signin-component"
-                    [disabled]="!loginForm.valid">Create your account</button>
+                <button mat-flat-button color="primary" style="margin: 20px;" (click)="authService.SignUp(email.value, password.value)"
+                    [disabled]="!loginForm.valid">Create
+                    your account</button>
+                <button type="button" mat-flat-button color="primary" (click)="authService.GoogleAuth()">
+                    <i class="fab fa-google-plus-g"></i>
+                    Continute with Google
+                </button>
                 <button mat-flat-button color="primary" routerLink="../login">Already have an account? Login
                     here</button>
             </form>
