@@ -19,12 +19,12 @@ const routes: Routes = [
   { path: 'register', component: SignUpComponent },
   { path: 'recipe-search', component: RecipesComponent, canActivate: [AuthGuard] },
   { path: 'recipe-list', component: RecipeListComponent, canActivate: [AuthGuard] },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent },
   { path: 'single-view', component: SingleRecipeComponent, canActivate: [AuthGuard] },
   { path: 'sidebar', component: SidebarComponent, canActivate: [AuthGuard] },
   { path: 'logged-in-home', component: LoggedInHomeComponent, canActivate: [AuthGuard] },
-  { path: 'add-recipe', component: AddRecipeComponent },
-  { path: 'pantry', component: PantryComponent }
+  { path: 'add-recipe', component: AddRecipeComponent, canActivate: [AuthGuard] },
+  { path: 'pantry', component: PantryComponent, canActivate: [AuthGuard] }
 ]
 
 @NgModule({
