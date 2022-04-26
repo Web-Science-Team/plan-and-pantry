@@ -22,7 +22,7 @@ module.exports = function (app, client) {
   });
 
   // get a recipe by id
-  app.get('/recipes/:id', async (req, res) => {
+  app.get('/recipe/:id', async (req, res) => {
     console.log(req.params)
 
     await client.connect();
@@ -60,7 +60,7 @@ module.exports = function (app, client) {
   });
 
   // can't add for a specific number, should error
-  app.post('/recipes/:id', (req, res) => {
+  app.post('/recipe/:id', (req, res) => {
     res.json('error: cannot post to a specific recipe');
   });
 
@@ -84,7 +84,7 @@ module.exports = function (app, client) {
   });
 
   // update a specific document in the db
-  app.put('/recipes/:id', async (req, res) => {
+  app.put('/recipe/:id', async (req, res) => {
     console.log(req.body);
 
     await client.connect();
@@ -121,7 +121,7 @@ module.exports = function (app, client) {
   });
 
   // delete a specific document from the db
-  app.delete('/recipes/:id', (req, res) => {
+  app.delete('/recipe/:id', (req, res) => {
     await client.connect();
     collection.deleteOne({ 'doc_num': doc_num }, function (err, result) {
       if (err) {
