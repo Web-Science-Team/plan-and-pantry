@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 module.exports = function (app, client) {
   const collection = client.db("plan-and-pantry").collection("recipes");
 
