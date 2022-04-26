@@ -1,4 +1,4 @@
-module.exports = function (app, client) {
+module.exports = (app, client) => {
   const collection = client.db("plan-and-pantry").collection("recipes");
 
   // get recipes from the db

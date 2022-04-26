@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
   res.send();
 });
 
+// User auth functions
+require('./auth')(app, client);
+
 // Recipe DB functions
 require('./recipes')(app, client);
 
