@@ -34,7 +34,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['home']);
+          this.router.navigate(['logged-in-home']);
         });
         this.SetUserData(result.user);
       })
@@ -49,7 +49,7 @@ export class AuthService {
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
-        // this.SendVerificationMail();
+        this.SendVerificationMail();
         this.SetUserData(result.user);
       })
       .catch((error) => {
@@ -84,7 +84,7 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       if (res) {
-        this.router.navigate(['home']);
+        this.router.navigate(['logged-in-home']);
       }
     });
   }
@@ -94,7 +94,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['home']);
+          this.router.navigate(['logged-in-home']);
         });
         this.SetUserData(result.user);
       })
