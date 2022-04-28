@@ -1,3 +1,5 @@
+var ObjectId = require('mongodb').ObjectId;
+
 module.exports = (app, client) => {
   const collection = client.db("plan-and-pantry").collection("recipes");
 
@@ -24,7 +26,7 @@ module.exports = (app, client) => {
     console.log(req.params)
 
     await client.connect();
-    collection.findOne({ '_id': id }, function (err, result) {
+    collection.findOne({ '_id': ObjectId(req.params.id) }, function (err, result) {
       if (err) {
         console.log(err);
         res.status(500).json('error: ' + err);
@@ -86,7 +88,7 @@ module.exports = (app, client) => {
     console.log(req.body);
 
     await client.connect();
-    collection.updateOne({ '_id': id }, { $set: req.body }, function (err, result) {
+    collection.updateOne({ '_id': ObjectId(req.params.id) }, { $set: req.body }, function (err, result) {
       if (err) {
         console.log(err);
         res.status(500).json('error: ' + err);
