@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadService } from '../services/file-upload.service';
-
+import { HttpService } from '../services/http.service';
 
 import { FormBuilder } from '@angular/forms';
 
@@ -21,20 +21,56 @@ export class AddRecipeComponent implements OnInit {
   shortLink: string = "";
   loading: boolean = false; // Flag variable
   file: any = null; // Variable to store file
+  ingredients: any[] = [];
+  instructions: any[] = [];
+  recipe: any = <JSON>{};
 
-  measurements: Measurements[] = [
-    { value: 'cup-0', viewValue: 'Cup' },
-    { value: 'spoon-1', viewValue: 'Spoon' },
-    { value: 'bowl-2', viewValue: 'Bowl' },
-  ];
-  constructor(private fileUploadService: FileUploadService) { }
+  constructor(private fileUploadService: FileUploadService, private httpService: HttpService) { }
 
   ngOnInit(): void {
+  }
+
+  addIngredient() {
+    this.ingredients.push({ "name": "", "amount": 0, "measurement": "" });
+  }
+
+  removeIngredient(index: number) {
+    this.ingredients.splice(index, 1);
+  }
+
+  addInstruction() {
+    this.instructions.push("");
+  }
+
+  removeInstruction(index: number) {
+    this.ingredients.splice(index, 1);
+  }
+
+  addRecipe(title: string, total_time: string, cook_time: string, prep_time: string, servings: string, category: string) {
+    this.recipe.title = title;
+    this.recipe.time = {};
+    this.recipe.time.total_time = total_time;
+    this.recipe.time.cook_time = cook_time;
+    this.recipe.time.prep_time = prep_time;
+    this.recipe.servings = servings;
+    this.recipe.category = category;
+    this.recipe.ingredients = this.ingredients;
+    this.recipe.instructions = this.instructions;
+
+    console.log(this.recipe);
+
+    this.httpService.postRecipe(this.recipe).subscribe((data: any) => {
+      this.recipe = {};
+    });
   }
 
   // On file Select
   onChange(event: any) {
     this.file = event.target.files[0];
+  }
+
+  trackBy(index: any, item: any) {
+    return index;
   }
 
   // OnClick of button Upload
