@@ -48,6 +48,7 @@ export class AddRecipeComponent implements OnInit {
 
   addRecipe(title: string, total_time: string, cook_time: string, prep_time: string, servings: string, category: string) {
     this.recipe.title = title;
+    this.recipe.author = JSON.parse(localStorage.getItem('user')!).uid;
     this.recipe.time = {};
     this.recipe.time.total_time = total_time;
     this.recipe.time.cook_time = cook_time;
